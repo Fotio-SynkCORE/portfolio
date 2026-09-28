@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | PreCode</title>
+<title>Contact | Fotio Precious</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,31 +18,71 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </head>
 
+
 <body>
+
+
+<header>
 
 <nav class="navbar">
 
 <h2 class="logo">
-<i class="fas fa-code"></i>
-Pre<span>Code</span>
+Fotio Precious
 </h2>
+
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
+
 
 <ul class="nav-links">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="projects.html">Projects & Innovations</a></li>
-<li><a href="certificates.html">Achievements</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="skills.html">Skills</a>
+</li>
+
+<li>
+<a href="projects.html">Projects & Innovations</a>
+</li>
+
+<li>
+<a href="certificates.html">Achievements</a>
+</li>
+
+<li>
+<a href="contact.html" class="active">Contact</a>
+</li>
+
+<li>
+<button id="theme-toggle" aria-label="Toggle theme">
+<i class="fas fa-moon"></i>
+</button>
+</li>
 
 </ul>
 
 </nav>
 
+</header>
+
+
+
+<!-- CONTACT SECTION -->
+
 <section class="contact">
 
+
 <h1>Let's Connect</h1>
+
 
 <p>
 
@@ -50,29 +90,102 @@ I'm always open to discussing technology, collaborations, internships, hackathon
 
 </p>
 
+
+
 <div class="contact-container">
+
+
+
+<!-- CONTACT INFORMATION -->
 
 <div class="contact-info">
 
 <h2>Contact Information</h2>
 
-<p><i class="fas fa-envelope"></i> FotioPrecious@gmail.com</p>
 
-<p><i class="fab fa-whatsapp"></i> +237 694197322</p>
+<p>
 
-<p><i class="fab fa-github"></i> github.com/Fotio-SynkCORE</p>
+<i class="fas fa-envelope"></i>
 
-<p><i class="fab fa-linkedin"></i> linkedin.com/in/FotioPrecious</p>
+<a href="mailto:preciousfotio@gmail.com">
 
-<p><i class="fas fa-location-dot"></i> Cameroon</p>
+preciousfotio@gmail.com
+
+</a>
+
+</p>
+
+
+<p>
+
+<i class="fab fa-whatsapp"></i>
+
+<a
+href="https://wa.me/237694197322"
+target="_blank"
+rel="noopener noreferrer">
+
++237 694 197 322
+
+</a>
+
+</p>
+
+
+<p>
+
+<i class="fab fa-github"></i>
+
+<a
+href="https://github.com/Fotio-SynkCORE"
+target="_blank"
+rel="noopener noreferrer">
+
+github.com/Fotio-SynkCORE
+
+</a>
+
+</p>
+
+
+<p>
+
+<i class="fab fa-linkedin"></i>
+
+<a
+href="https://www.linkedin.com/in/fotio-precious-46098432b/"
+target="_blank"
+rel="noopener noreferrer">
+
+linkedin.com/in/fotio-precious
+
+</a>
+
+</p>
+
+
+<p>
+
+<i class="fas fa-location-dot"></i>
+
+Cameroon
+
+</p>
+
 
 </div>
+
+
+
+<!-- CONTACT FORM -->
 
 <div class="contact-form">
 
 <h2>Send Me a Message</h2>
 
+
 <form id="contact-form">
+
 
 <input
 type="text"
@@ -80,11 +193,13 @@ name="from_name"
 placeholder="Your Name"
 required>
 
+
 <input
 type="email"
 name="reply_to"
 placeholder="Your Email"
 required>
+
 
 <input
 type="text"
@@ -92,51 +207,79 @@ name="subject"
 placeholder="Subject"
 required>
 
+
 <textarea
 rows="6"
 name="message"
 placeholder="Your Message"
-required></textarea>
+required>
+</textarea>
 
-<button class="btn" id="send-btn" type="submit">
+
+<button
+class="btn"
+id="send-btn"
+type="submit">
 
 Send Message
 
 </button>
 
+
 </form>
 
 </div>
+
 
 </div>
 
 </section>
 
+
+
+<!-- FOOTER -->
+
 <footer>
 
 <p>
 
-© 2026 <span>PreCode</span> | Designed & Built by Fotio Precious ❤️
+© 2026 <span>Fotio Precious</span> |
+Designed & Built by Fotio Precious ❤️
 
 </p>
 
 </footer>
 
+
+
+<!-- EMAILJS -->
+
 <script>
 
 emailjs.init({
-publicKey:"Spanzlo2R8PnV2PX2"
+
+publicKey: "Spanzlo2R8PnV2PX2"
+
 });
 
-const form=document.getElementById("contact-form");
 
-const btn=document.getElementById("send-btn");
+const form =
+document.getElementById("contact-form");
 
-form.addEventListener("submit",function(e){
+
+const btn =
+document.getElementById("send-btn");
+
+
+form.addEventListener(
+"submit",
+function(e){
 
 e.preventDefault();
 
-btn.innerHTML="Sending...";
+
+btn.innerHTML = "Sending...";
+
 
 emailjs.sendForm(
 
@@ -154,7 +297,7 @@ alert("✅ Message sent successfully!");
 
 form.reset();
 
-btn.innerHTML="Send Message";
+btn.innerHTML = "Send Message";
 
 })
 
@@ -164,7 +307,7 @@ alert("❌ Failed to send message.");
 
 console.log(error);
 
-btn.innerHTML="Send Message";
+btn.innerHTML = "Send Message";
 
 });
 
@@ -172,7 +315,10 @@ btn.innerHTML="Send Message";
 
 </script>
 
+
+
 <script src="script.js"></script>
+
 
 </body>
 
